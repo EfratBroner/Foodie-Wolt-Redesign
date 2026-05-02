@@ -1,0 +1,136 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #b3e5fc);
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  b {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #2d3436;
+  }
+  
+  /* תצוגת מוצר – כל כרטיס */
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-height: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  section p{
+    direction: ltr;
+  }
+  section img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  section p:nth-of-type(2), section p:nth-of-type(3) {
+    padding: 10px 15px 5px 15px;
+    font-size: 18px;
+    margin: 0;
+    color: #2d3436;
+  }
+  
+  section p:nth-of-type(2) {
+    font-weight: bold;
+    color: #0984e3;
+  }
+  #cardsproduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  #delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    background-color: #3bd6d6;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d3436;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+  }
+  
+  
+  #delete:hover {
+    background-color: #2aa3c5;
+  }
+  
+  
+  /* סך הכול – במרכז */
+  #sum {
+    font-size: 24px;
+    color: #2d3436 ;
+    background-color: #dfe6e9;
+    padding: 15px 30px;
+    border-radius: 12px;
+    width: fit-content;
+    margin: 50px auto 20px auto;
+    direction: ltr;
+  }
+  
+  /* כפתור תשלום */
+  nav {
+    margin: 0 auto;
+    padding: 20px 60px;
+    background-color: #3bd6d6 ;
+    color: #fff;
+    border-radius: 32px;
+    font-size: 22px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav:hover {
+    background-color: #2aa3c5 ;
+  }
+
+/* אין מוצרים בעגלה */
+  #pop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00b894;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 10000;
+    animation: fadeInOut 2.5s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0%   { opacity: 0; transform: translate(-50%, -60%); }
+    10%  { opacity: 1; transform: translate(-50%, -50%); }
+    90%  { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+  }

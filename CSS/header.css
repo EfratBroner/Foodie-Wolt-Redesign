@@ -1,0 +1,260 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+
+  }
+  
+  /* כותרת עליונה */
+  
+  .header {
+    position: fixed; /* גורם להישאר למעלה */
+    top: 0;
+    height: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* מוודא שהיא מעל שאר האלמנטים */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* שקוף לבן */
+    backdrop-filter: blur(10px); /* אפקט טשטוש */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* צל קל */
+  }
+  .site-title {
+  text-align: center;
+}
+  
+  /* צד שמאל - כפתורים */
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  /* שם המשתמש - ימין */
+  #namee {
+    font-weight: bold;
+    color: #4a148c;
+    font-size: 20px;
+  }
+  
+  /* כפתורים עיצוב */
+  #signUp, #signIn {
+  font-family: 'Varela Round', sans-serif;
+
+  color: rgb(0, 0, 0);
+  background-color: #2196f3; 
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #00000033;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+#signUp:hover, #signIn:hover {
+  transform: scale(1.05);
+  background-color: #2586e8; 
+}
+  h1 {
+    margin: 0;
+    padding: 0;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+     display: flex;
+  align-items: center;
+  justify-content: center;
+
+  }
+  #tytle{
+    height: 100px;
+    margin-top: 50px;
+  }
+ 
+
+#tytle1 {
+  height: 80px;
+  margin-top: 60px;
+  margin-bottom: -65px; /* מעלה את התמונה מעל מה שמתחתיה */
+}
+
+  #logo{
+   height: 30px;
+   width: 100px;
+   border: none;
+  background: none;
+  border-color: white;
+  }
+  a img{
+   height: 100%;
+   width: 100%;
+  }
+  p{
+   color: #2196f3
+  }
+  #salName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  #salName img{
+ width: 50px;
+ height: 50px;
+ margin-left: 10px;
+
+  }
+
+
+
+  /* העגלה */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+} 
+
+body {
+  font: 14px/22px "Ubuntu", Arial, sans-serif;
+  background: white;
+} 
+
+.lighter-text {
+  color: #ABB0BE  ;
+}
+
+.main-color-text {
+  color: #00c0cb  ;
+}
+
+
+.badge {
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.shopping-cart {
+  background: white;
+  width: 320px;
+  position: absolute;
+  top: 30px;
+  left: -10px; /* שונה מ-right */
+  border-radius: 3px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)!important;
+  transition: all .2s ease;
+  opacity: 0;
+  transform-origin: left top 0; /* שונה מ-right */
+  transform: scale(0);
+  z-index: 9999;
+
+}
+
+.shopping-cart.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.shopping-cart .cart-icon {
+  color: #515783 ;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+
+.shopping-cart .shopping-cart-total {
+  float: right;
+}
+
+.shopping-cart-items {
+  padding-top: 20px;
+}
+
+.shopping-cart-items li {
+  margin-bottom: 18px;
+}
+
+.shopping-cart-items img {
+  float: left;
+  margin-right: 12px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.shopping-cart-items .item-name {
+  display: block;
+  font-size: 16px;
+
+}
+
+.shopping-cart-items .item-detail {
+  display: block;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+.shopping-cart-items .item-price {
+  color: #00c0cb  ;
+  margin-right: 8px;
+}
+
+.shopping-cart-items .item-quantity {
+  color: #ABB0BE  ;
+    
+}
+
+.shopping-cart:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+  
+   background-color: #00c0cb ;
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-right: 40px;
+}
+.footer:hover {
+  background-color: #0ba5ad ;;
+}
+.footer p{
+  color: black;
+}

@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif
+  }
+  
+
+  #picstore {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    justify-content: flex-end; 
+    text-align: right;
+    direction: ltr; 
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+  }
+
+#picstore p {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+}
+  #mapa {
+    position: relative; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 500px;
+  }
+
+  #map {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( 20%, -180%); /* ממקם בדיוק  */
+    padding: 5px 10px;
+    font-size: 17px;
+    color: rgb(45, 198, 225);
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 10;
+    /* background-color: #e12db4; */
+    box-shadow: rgba(0,0,0,0.2);
+  }
+  #products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: row-reverse; /* הופך את הצדדים – טקסט ימין, תמונה שמאל */
+    width: 400px;
+    height: 140px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* בעת ריחוף */
+  .product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* התמונה בצד שמאל */
+  .product img {
+    width: 140px;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 8px;
+    margin-left: 10px;
+  }
+  
+  
+  /* שם המוצר */
+  #name {
+    font-size: 18px;
+    color: #030303;
+    position: absolute;   
+    top: 15px;            
+    right: 10px;
+    text-align: right;
+  }
+  
+  
+  /* המחיר */
+  #price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2dc6e1;
+    position: absolute;   /* כבר יש */
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    direction: ltr;
+  }
+  
+  
+  /* העטיפה של שם + מחיר */
+  .product div {
+    flex-grow: 1;
+    height: 100%;
+  }
+  
+
+
+  /* הוספת מוצר לעגלה */
+  #popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00b894;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 10000;
+    animation: fadeInOut 2.5s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0%   { opacity: 0; transform: translate(-50%, -60%); }
+    10%  { opacity: 1; transform: translate(-50%, -50%); }
+    90%  { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+  }
+  
+  
+  /* אייקון לב */
+
+
+  .toggle-icon {
+    width: 45pt;
+    height: 45pt;
+    font-size: 45pt;
+    color: black;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+  
+  .toggle-icon:before,
+  .toggle-icon:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-out;
+    content: "\f08a";
+    font-family: fontawesome;
+  }
+  
+  .toggle-icon:hover:before {
+    transform: scale(1.2);
+  }
+  
+  .toggle-icon:active:before {
+    transition: none;
+    transform: scale(1);
+  }
+  
+  .toggle-icon:after {
+    opacity: 0;
+  }
+  
+  .toggle-icon.-checked {
+    color:rgb(11, 152, 170);
+  }
+  
+  .toggle-icon.-checked:before {
+    content: "\f004"; /* heart full */
+  }
+  
+  .toggle-icon.-checked:after {
+    content: "\f004";
+    animation: likeFly 0.6s ease-in;
+  }
+  
+  @keyframes heartbeat {
+    from {
+      opacity: 1;
+    }
+    to {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes likeFly {
+    from {
+      opacity: 1;
+    }
+    to {
+      transform: scale(3) rotate(45deg) translateY(-90px);
+      opacity: 0;
+    }
+  }

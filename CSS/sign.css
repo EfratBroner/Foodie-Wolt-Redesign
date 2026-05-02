@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(to right, #e0f7fa, #b3e5fc); /* כחול בהיר */
+}
+
+/* טופס */
+form {
+  background-color: #ffffffcc;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00AEEF; /* כחול של Wolt */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #006F9A; /* כחול כהה יותר */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #00AEEF;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  background-color: #00AEEF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0086c3; /* כחול מעט כהה יותר */
+}
